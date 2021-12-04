@@ -1,13 +1,13 @@
 pipeline {
 
-agent any
+    //agent any
 
-    // agent {
-    //     docker {
-    //         image 'cypress/browsers:node16.5.0-chrome94-ff93'
-    //         args '-u root:root'
-    //     }
-    // }
+    agent {
+        docker {
+            image 'cypress/browsers:node16.5.0-chrome94-ff93'
+            args '-u root:root'
+        }
+    }
     // agent {
     //     docker {
     //         image 'cypress/browsers:node16.5.0-chrome94-ff93'
