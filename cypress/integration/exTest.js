@@ -5,9 +5,10 @@ describe("This one walk", () => {
     cy.visit("https://yandex.ru");
     cy.title().should("contain", "Яндекс");
   });
-  it("Test two Гугл", () => {
+  it.skip("Test two Гугл", () => {
     cy.visit("https://google.com");
     cy.title().should("contain", "Гугл");
     cy.title().should("contain", "Google");
+    // npx cypress run --record --key b1b6e045-b0ee-4e35-ba6c-d7eb04425587 --browser chrome --tag "OnTest"
   });
 });
