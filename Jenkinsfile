@@ -3,10 +3,10 @@ pipeline {
    // agent any
 
     agent {
-        docker 
+        docker {
              'cypress/browsers:node16.5.0-chrome94-ff93'
            // args '-u root:root'
-        
+        }
     }
     // agent {
     //     docker {
