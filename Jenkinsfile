@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'cypress/browsers:node16.5.0-chrome94-ff93'
+            args '-u root:root'
+        }
+    }
     // agent {
     //     docker {
     //         image 'cypress/browsers:node16.5.0-chrome94-ff93'
@@ -18,7 +22,12 @@ pipeline {
     }   
         stage('Download step') {
             steps {
-                sh 'npm cypress run'
+                sh '$(npm bin)/cypress verify'
+            }
+        } 
+        stage('Download step') {
+            steps {
+                sh '$(npm bin)/cypress'
             }
         }
     }
