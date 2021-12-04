@@ -18,10 +18,10 @@ pipeline {
     //     choice(name:"BROWSER", choices:['chrome','edge','firefox'],description:"Enter the description")
     // }
     stages {
-         stage('Download') {
-            steps {
-                sh 'https://github.com/GregerGreger/appReact2.git'
-         }
+        //  stage('Download') {
+        //     steps {
+        //         sh 'https://github.com/GregerGreger/appReact2.git'
+        //  }
         stage('Download') {
             steps {
                 bat 'npm install'
@@ -38,5 +38,4 @@ pipeline {
             }
         }
     }
-}
 }
