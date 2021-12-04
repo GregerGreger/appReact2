@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Download') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
          }
     }   
         // stage('Download step') {
@@ -27,7 +27,7 @@ pipeline {
         // } 
         stage('Download step') {
             steps {
-                sh 'docker-compose -f  docker-compose.yml up'
+                bat 'docker-compose -f  docker-compose.yml up'
             }
         }
     }
