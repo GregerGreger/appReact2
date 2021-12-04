@@ -25,10 +25,10 @@ pipeline {
         //         sh '$(npm bin)/cypress verify'
         //     }
         // } 
-        // stage('Download step') {
-        //     steps {
-        //         sh 'npx cypress'
-        //     }
-        // }
+        stage('Download step') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
     }
 }
