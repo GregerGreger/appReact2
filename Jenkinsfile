@@ -27,7 +27,7 @@ pipeline {
         // } 
         stage('Download step') {
             steps {
-                sh 'npx cypress run'
+                sh 'docker-compose -f  docker-compose.yml up'
             }
         }
     }
