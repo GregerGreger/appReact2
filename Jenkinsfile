@@ -20,15 +20,15 @@ pipeline {
                 sh 'npm install'
          }
     }   
-        stage('Download step') {
-            steps {
-                sh '$(npm bin)/cypress verify'
-            }
-        } 
-        stage('Download step') {
-            steps {
-                sh '$(npm bin)/cypress'
-            }
-        }
+        // stage('Download step') {
+        //     steps {
+        //         sh '$(npm bin)/cypress verify'
+        //     }
+        // } 
+        // stage('Download step') {
+        //     steps {
+        //         sh 'npx cypress'
+        //     }
+        // }
     }
 }
