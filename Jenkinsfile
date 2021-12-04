@@ -13,10 +13,7 @@ pipeline {
             steps {
                 sh 'npm install'
          }
-        }
-    }
-
-    stages {
+    }   
         stage('Download step') {
             steps {
                 sh 'npm cypress run'
