@@ -1,10 +1,13 @@
 pipeline {
-    agent {
-        docker {
-            image 'cypress/browsers:node16.5.0-chrome94-ff93'
-            args '-u root:root'
-        }
-    }
+
+agent any
+
+    // agent {
+    //     docker {
+    //         image 'cypress/browsers:node16.5.0-chrome94-ff93'
+    //         args '-u root:root'
+    //     }
+    // }
     // agent {
     //     docker {
     //         image 'cypress/browsers:node16.5.0-chrome94-ff93'
@@ -15,6 +18,10 @@ pipeline {
     //     choice(name:"BROWSER", choices:['chrome','edge','firefox'],description:"Enter the description")
     // }
     stages {
+         stage('Download') {
+            steps {
+                git 'https://github.com/GregerGreger/appReact2.git'
+         }
         stage('Download') {
             steps {
                 bat 'npm install'
