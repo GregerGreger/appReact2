@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Download step') {
             steps {
-                sh 'npm install'
+                sh 'npm cypress run'
             }
         }
     }
