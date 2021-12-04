@@ -20,7 +20,7 @@ pipeline {
     stages {
          stage('Download') {
             steps {
-                git 'https://github.com/GregerGreger/appReact2.git'
+                sh 'https://github.com/GregerGreger/appReact2.git'
          }
         stage('Download') {
             steps {
