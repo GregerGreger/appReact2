@@ -1,0 +1,7 @@
+version: '2'
+services:
+  e2e:
+    image: cypress02
+    build: .
+    container_name: cypress02
+    command: npx cypress run
